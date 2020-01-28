@@ -21,6 +21,10 @@ public class UserService {
 		
 		return stream(userRepository.findAll().spliterator(), false).collect(toList());
 	}
+	
+	public void create(User user) {
+		userRepository.save(user);
+	}
 
 
 }
