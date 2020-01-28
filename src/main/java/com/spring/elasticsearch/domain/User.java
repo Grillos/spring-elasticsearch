@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(indexName = "user", type = "user")
+@Document(indexName = "users", type = "user")
 public class User {
 
     private Long id;

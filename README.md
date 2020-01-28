@@ -17,13 +17,16 @@ Elasticsearch + Spring data
 
 ### Como usar as aplicações? ###
 
-* faça um request:
-    curl -X POST \
-    http://localhost:8080/users \
-    -H 'Content-Type: application/json' \
-    -H 'Host: localhost:8080' \
-    -d '{
-        "id": 1,
-        "username": "robson.grillo",
-        "password": "*****"
-    }'
+* Criar index no elasticsearch:
+    curl --location --request PUT 'http://127.0.0.1:9200/users'
+
+* Criar registro de usuario
+curl --location --request PUT 'localhost:9200/users/user/1' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 1,
+    "username": "robson.grillo",
+    "password": "*****"
+}'
+
+
